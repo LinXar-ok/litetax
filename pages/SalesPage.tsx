@@ -369,6 +369,87 @@ export const SalesPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Elite Personal Banking Section */}
+      <section className="py-24 bg-slate-900 text-white relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-slate-800 via-slate-900 to-black"></div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="lg:grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <div className="inline-block px-3 py-1 bg-gradient-to-r from-yellow-600 to-yellow-400 text-black text-xs font-bold uppercase tracking-wider rounded-full mb-6">
+                Included in the 1% Foundation
+              </div>
+              <h2 className="text-3xl md:text-5xl font-serif font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-white via-slate-200 to-slate-400">
+                Elite Personal Banking
+              </h2>
+              <p className="text-slate-300 mb-8 text-lg leading-relaxed">
+                Banking is the cornerstone of your fiscal defensibility. Our 2026 Framework ensures your accounts are structured to meet international transparency standards from day one.
+              </p>
+              
+              <ul className="space-y-6">
+                {[
+                  { title: "Mastercard World Elite & Visa Platinum", desc: "Premium card services with global reach." },
+                  { title: "Multi-currency (USD/EUR/GBP/GEL)", desc: "Full flexibility for international operations." },
+                  { title: "VIP Airport Lounge Access", desc: "Traveling in comfort as part of your banking tier." },
+                  { title: "Private Banker", desc: "Dedicated support for high-performing founders." },
+                  { title: "No Minimum Deposit", desc: "Direct entry into elite Georgian banking." }
+                ].map((item, i) => (
+                  <li key={i} className="flex items-start gap-4 group">
+                    <div className="flex-shrink-0 w-8 h-8 rounded-full bg-slate-800 border border-slate-700 flex items-center justify-center group-hover:border-yellow-500/50 transition-colors duration-300">
+                      <svg className="w-4 h-4 text-yellow-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+                    <div>
+                      <h4 className="font-bold text-white text-lg">{item.title}</h4>
+                      <p className="text-slate-400 text-sm">{item.desc}</p>
+                    </div>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            
+            <div className="hidden lg:block relative mt-12 lg:mt-0">
+              {/* Abstract Banking Visual */}
+              <div className="relative w-full aspect-[3/4] max-w-md mx-auto">
+                {/* Card 1 */}
+                <div className="absolute top-0 right-0 w-64 h-40 bg-gradient-to-br from-slate-700 to-slate-800 rounded-xl border border-slate-600 shadow-2xl transform rotate-6 z-10 p-6 flex flex-col justify-between">
+                  <div className="flex justify-between items-start">
+                    <div className="w-8 h-5 bg-yellow-500/20 rounded"></div>
+                    <div className="text-xs font-mono text-slate-400">WORLD ELITE</div>
+                  </div>
+                  <div>
+                    <div className="text-xs text-slate-500 mb-1">**** **** **** 4291</div>
+                    <div className="text-sm font-medium text-slate-300">LITETAX MEMBER</div>
+                  </div>
+                </div>
+                
+                {/* Card 2 (Main) */}
+                <div className="absolute top-12 left-0 w-80 h-48 bg-gradient-to-br from-slate-900 to-black rounded-xl border border-yellow-500/30 shadow-2xl z-20 p-8 flex flex-col justify-between backdrop-blur-xl">
+                  <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent rounded-xl"></div>
+                  <div className="relative flex justify-between items-start">
+                    <div className="w-10 h-6 bg-yellow-500 rounded-md shadow-lg shadow-yellow-500/20"></div>
+                    <div className="text-xs font-mono text-yellow-500 tracking-widest">PLATINUM</div>
+                  </div>
+                  <div className="relative">
+                    <div className="flex gap-4 mb-4">
+                      <div className="text-xs font-mono text-slate-500">5412</div>
+                      <div className="text-xs font-mono text-slate-500">7512</div>
+                      <div className="text-xs font-mono text-slate-500">3412</div>
+                      <div className="text-xs font-mono text-slate-200">3456</div>
+                    </div>
+                    <div className="flex justify-between items-end">
+                      <div className="text-sm font-medium text-white tracking-wide">YOUR NAME</div>
+                      <div className="text-xs text-slate-500">VALID THRU 12/28</div>
+                    </div>
+                  </div>
+                </div>
+                
+                {/* Decorative Elements */}
+                <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-yellow-500/10 rounded-full blur-3xl -z-10"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
