@@ -12,20 +12,28 @@ export const BOOK_DETAILS = {
 
 export const FAQS: FAQItem[] = [
   {
-    question: "Is this book suitable for complete beginners?",
-    answer: "Absolutely. We stripped away the legal jargon and explained everything in plain English tailored for business owners, not accountants."
+    question: "Do I have to live in Georgia to benefit from the 1% tax rate?",
+    answer: "No. The 'Small Business Status' (1% tax) applies to Georgian tax residents and non-residents alike. You do not need to live in Georgia to maintain your company or the tax status. However, to be a tax resident of Georgia (and stop paying tax elsewhere), you generally need to spend 183 days there, OR use our 'High Net Worth' program."
   },
   {
-    question: "Does it cover the latest GRA updates for 2024?",
-    answer: "Yes, the digital edition is updated quarterly. Your purchase includes free updates for the first year."
+    question: "Is the 1% tax rate guaranteed forever?",
+    answer: "The 1% rate is codified in the Tax Code of Georgia (Article 88). It is not a temporary promotion. While no tax law is 'forever', Georgia has a constitutional ban on raising taxes without a referendum, making it one of the most stable fiscal environments in the world."
   },
   {
-    question: "Is this a physical book or an eBook?",
-    answer: "This is a digital eBook (PDF & ePub). You will receive an instant download link immediately after purchase."
+    question: "What if my turnover exceeds 500,000 GEL (~€170,000)?",
+    answer: "If you exceed the 500,000 GEL limit in a calendar year, you will be taxed at 3% on the excess amount for that year. You do not lose the status immediately. If you exceed it for 2 consecutive years, you may transition to the standard 20% regime, but we can help you restructure before that happens."
   },
   {
-    question: "What if I'm not satisfied?",
-    answer: "We offer a 30-day money-back guarantee. If you don't save at least the cost of the book in tax optimizations, we'll refund you."
+    question: "Can I open a bank account remotely?",
+    answer: "Generally, no. Top-tier Georgian banks (TBC, Bank of Georgia) require a physical presence for the initial opening to comply with KYC/AML laws. Our 1% Foundation package includes full support for your banking visit (1-2 days required in Tbilisi)."
+  },
+  {
+    question: "Does this work for US Citizens?",
+    answer: "Yes, but US citizens are taxed on worldwide income. You can use the Foreign Earned Income Exclusion (FEIE) to exclude ~$120k of income if you meet the physical presence test. The Georgian 1% tax is a valid foreign tax credit. We recommend speaking with a US tax specialist in addition to our services."
+  },
+  {
+    question: "What activities are NOT eligible for 1% tax?",
+    answer: "Consulting (in some specific definitions), financial services, gambling, and medical services are typically excluded. Software development, marketing, design, e-commerce (goods), and most digital services are fully eligible. Our Strategic Audit verifies your specific eligibility."
   }
 ];
 

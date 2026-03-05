@@ -1,13 +1,25 @@
 import React from 'react';
-import { SalesPage } from './pages/SalesPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Layout } from './components/Layout';
+import { HomePage } from './pages/HomePage';
+import { WhyGeorgiaPage } from './pages/WhyGeorgiaPage';
+import { FoundationPage } from './pages/FoundationPage';
+import { ContactPage } from './pages/ContactPage';
+import { FAQPage } from './pages/FAQPage';
 
 function App() {
-  // Since this is a single page request, we route directly to the SalesPage.
-  // In a larger app, we would use HashRouter or similar here.
   return (
-    <div className="antialiased">
-      <SalesPage />
-    </div>
+    <Router>
+      <Layout>
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/why-georgia" element={<WhyGeorgiaPage />} />
+          <Route path="/foundation" element={<FoundationPage />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/faq" element={<FAQPage />} />
+        </Routes>
+      </Layout>
+    </Router>
   );
 }
 

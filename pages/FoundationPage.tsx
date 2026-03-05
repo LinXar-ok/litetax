@@ -1,17 +1,9 @@
 import React, { useState } from 'react';
 import { Button } from '../components/Button';
-import { Book3D } from '../components/Book3D';
-import { ChatAssistant } from '../components/ChatAssistant';
-import { BOOK_DETAILS, FAQS, TESTIMONIALS, STRIPE_CHECKOUT_URL } from '../constants';
-import { FAQItem, Testimonial } from '../types';
+import { TESTIMONIALS, FAQS } from '../constants';
 
-export const SalesPage: React.FC = () => {
+export const FoundationPage: React.FC = () => {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
-
-  const handleCheckout = () => {
-    // In a real app, this would track the click event
-    window.location.href = STRIPE_CHECKOUT_URL;
-  };
 
   const toggleFaq = (index: number) => {
     setOpenFaq(openFaq === index ? null : index);
@@ -19,21 +11,6 @@ export const SalesPage: React.FC = () => {
 
   return (
     <div className="min-h-screen bg-white">
-      {/* Navbar (Minimal) */}
-      <nav className="fixed w-full z-40 bg-white/90 backdrop-blur-md border-b border-slate-100">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-16">
-            <div className="flex-shrink-0 flex items-center gap-2">
-              <div className="w-8 h-8 bg-brand-600 rounded-lg flex items-center justify-center text-white font-bold">L</div>
-              <span className="font-bold text-xl tracking-tight text-slate-900">LiteTax</span>
-            </div>
-            <div className="hidden md:block">
-              <Button onClick={() => window.location.href = 'https://calendly.com/d/ctsv-4b7-7fc/litetax-strategic-eligibility-audit'} size="sm" variant="primary">Book Audit - €99</Button>
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative pt-32 pb-20 lg:pt-40 lg:pb-28 overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-brand-100 via-slate-50 to-white"></div>
@@ -478,7 +455,7 @@ export const SalesPage: React.FC = () => {
       {/* FAQ */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h2 className="text-3xl font-bold text-center mb-12">Frequently Asked Questions</h2>
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-center mb-16 text-slate-900">Frequently Asked Questions</h2>
           <div className="space-y-4">
             {FAQS.map((faq, index) => (
               <div key={index} className="bg-white rounded-xl shadow-sm border border-slate-200 overflow-hidden">
@@ -520,21 +497,6 @@ export const SalesPage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-white border-t border-slate-100 py-12">
-        <div className="max-w-7xl mx-auto px-4 text-center text-slate-400 text-sm">
-          <p>&copy; {new Date().getFullYear()} LiteTax Ghana. All rights reserved.</p>
-          <div className="flex justify-center gap-6 mt-4">
-            <a href="#" className="hover:text-brand-600">Privacy Policy</a>
-            <a href="#" className="hover:text-brand-600">Terms of Service</a>
-            <a href="#" className="hover:text-brand-600">Contact Support</a>
-          </div>
-        </div>
-      </footer>
-
-      {/* Chat Widget */}
-      <ChatAssistant />
     </div>
   );
 };
