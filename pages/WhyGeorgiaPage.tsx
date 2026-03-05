@@ -16,6 +16,63 @@ export const WhyGeorgiaPage: React.FC = () => {
         </div>
       </section>
 
+      {/* Georgia at a Glance */}
+      <section className="py-16 bg-slate-50 border-y border-slate-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-slate-900">Georgia at a Glance</h2>
+          </div>
+          <div className="grid md:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+              <div className="text-5xl font-bold text-brand-600 mb-4">1%</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Small Business Tax</h3>
+              <p className="text-slate-600">The headline benefit. Pay just 1% on turnover up to ~€170k/year.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+              <div className="text-5xl font-bold text-brand-600 mb-4">3-4</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Weeks to Start</h3>
+              <p className="text-slate-600">From document collection to full operation, including banking.</p>
+            </div>
+            <div className="bg-white p-8 rounded-2xl shadow-sm border border-slate-100 text-center">
+              <div className="text-5xl font-bold text-brand-600 mb-4">A+</div>
+              <h3 className="text-xl font-bold text-slate-900 mb-2">Fiscal Home</h3>
+              <p className="text-slate-600">A legitimate, OECD-compliant jurisdiction, not a tax haven.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Work */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl font-bold text-slate-900">How We Work</h2>
+            <p className="text-slate-600 max-w-2xl mx-auto mt-4">
+              We don't just register companies; we build defensible fiscal architectures.
+            </p>
+          </div>
+          
+          <div className="grid md:grid-cols-3 gap-8">
+            {[
+              { title: "Expert Navigation", desc: "We guide you through the nuances of Georgian tax law, ensuring you avoid common pitfalls." },
+              { title: "Keep More Profit", desc: "Maximize your earnings legally with the 1% tax rate, reinvesting savings into growth." },
+              { title: "2026 Defensibility", desc: "Future-proof your setup. We build with upcoming regulations and substance requirements in mind." },
+              { title: "Strategic Onboarding", desc: "A tailored, step-by-step process designed for high-performing founders." },
+              { title: "Elite Banking", desc: "Direct access to top-tier banking institutions (TBC, BoG) with VIP support." },
+              { title: "Operate Globally", desc: "Run your business from anywhere while maintaining a solid fiscal base in Georgia." }
+            ].map((item, i) => (
+              <div key={i} className="flex flex-col items-start p-6 rounded-xl hover:bg-slate-50 transition-colors duration-300">
+                <div className="w-10 h-10 bg-brand-100 rounded-lg flex items-center justify-center text-brand-600 mb-4">
+                  <Check className="w-5 h-5" />
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed">{item.desc}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Comparison Chart */}
       <section className="py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
