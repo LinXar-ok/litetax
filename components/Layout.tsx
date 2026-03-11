@@ -21,6 +21,7 @@ export const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) =>
     { name: 'Home', path: '/' },
     { name: 'Why Georgia', path: '/why-georgia' },
     { name: 'The 1% Foundation', path: '/foundation' },
+    { name: 'Consultation', path: '/consultation' },
     { name: 'FAQ', path: '/faq' },
     { name: 'Contact', path: '/contact' },
   ];
